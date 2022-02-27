@@ -1,11 +1,18 @@
-# Refactoring Kata
+# Python Challenge 
 
-This Kata is based on the Gilded Rose Kata, originally created by Terry Hughes (http://twitter.com/TerryHughes). It is already on GitHub [here](https://github.com/NotMyself/GildedRose). See also [Bobby Johnson's description of the kata](http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/) and [this version with multiple languages](https://github.com/emilybache/GildedRose-Refactoring-Kata).
+##  Observed so Far: 
 
-## How to use this Kata
+- [x] Long Methods
+- [ ] Many conditionals
+- [ ] Repitition
+- [ ] Negative Logic
+- [ ] Similar Patterns
 
-The simplest way is to just clone the code and start hacking away improving the design. 
-Instructions can be found in the GildedRoseRequirements document.
+## Timeline:
 
+### Day01 :
 
-Have fun and good luck!
+- Install the python and learn basics about how is it working. Then learned about the syntax of python and after that clone a repository and try solving this challenge. well at first it seems pretty ugly code (poorly formatted) but obviously that's what I have solve. 
+- Then I spent alot of time just understanding what this is about and finally got to know what I have to do to solve this. well yeah just made my first test running yay!! that doesn't gives any logic to code but still 🎉 So first day was quite rough day for me. 
+
+### Day02 :

@@ -12,7 +12,7 @@ class GildedRose(object):
                 item.quality = 80
                 continue
             
-            if item.name == 'Good Wine':
+            elif item.name == 'Good Wine':
                 self.increase_quality(item)
                 item.sell_in = item.sell_in - 1
 
@@ -20,7 +20,7 @@ class GildedRose(object):
                     self.increase_quality(item)
                 continue
             
-            if item.name == "Backstage passes for Re:Factor" or item.name == "Backstage passes for HAXX":
+            elif item.name == "Backstage passes for Re:Factor" or item.name == "Backstage passes for HAXX":
               
                 if item.sell_in < 6:
                     item.quality = item.quality + 3
@@ -32,24 +32,24 @@ class GildedRose(object):
                     item.quality = item.quality + 1   
 
                 item.sell_in = item.sell_in - 1
+                
                 if item.sell_in < 0:
                     item.quality = 0
 
-                if item.quality > 50:
-                    item.quality = 50
+                item.quality = min(item.quality,50)
                 # change to 0 because that makes no sense item.quality -item.quality
                 continue
             
-            
-            if item.quality > 0:
-                item.quality = item.quality - 1
-           
-                
-                   
+            else:
+                self.item_quality_never_be_negative(item)
+                item.sell_in = item.sell_in - 1
 
-            if item.sell_in < 0:
-                if item.quality > 0:
-                    item.quality = item.quality - 1
+                if item.sell_in < 0:
+                    self.item_quality_never_be_negative(item)
+
+    def item_quality_never_be_negative(self, item):
+        item.quality = item.quality - 1
+        item.quality = max(item.quality,0)
   
   
     def increase_quality(self, item):

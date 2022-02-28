@@ -54,3 +54,8 @@ After removing that I have to test my code if its still working and they are sti
 
 - So much sneaky code so I am refactoring it.
 - Multiple ifs change into if elif else 
+- for quality greater than 0 to max(item.quality,0)
+
+- And now test is working 👏🏼
+
+- So refactoring part is almost done we can still avoid repitition of code by extracting method which I am going to do but still its fun part to do.

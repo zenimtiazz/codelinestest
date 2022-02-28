@@ -24,3 +24,5 @@
 - So its difficult which test I can do first and one thing which standouts from rest of code is ``` B-Dawg keychain never has to be sold or decrease in quality and also this item always have quality 80 ``` 😳 
 - In test I have alwyas have to focus two things first is sellin and second is quality.
 - So this test works item doesn't degrade in quality whatever the sellin date is so this test works 
+
+- This test seems pretty easy to write lets do our 2nd test Good wine increase in quality the older it gets.

@@ -13,31 +13,12 @@ class GildedRose(object):
                 continue
             
             elif item.name == 'Good Wine':
-                self.increase_quality(item)
-                item.sell_in = item.sell_in - 1
-
-                if item.sell_in < 0:
-                    self.increase_quality(item)
+                self.Good_Wine(item)
                 continue
             
             elif item.name == "Backstage passes for Re:Factor" or item.name == "Backstage passes for HAXX":
               
-                if item.sell_in < 6:
-                    item.quality = item.quality + 3
-             
-                elif item.sell_in < 11:
-                    item.quality = item.quality + 2
-               
-                else:
-                    item.quality = item.quality + 1   
-
-                item.sell_in = item.sell_in - 1
-                
-                if item.sell_in < 0:
-                    item.quality = 0
-
-                item.quality = min(item.quality,50)
-                # change to 0 because that makes no sense item.quality -item.quality
+                self.Backstage_Passes(item)
                 continue
             
             else:
@@ -46,6 +27,30 @@ class GildedRose(object):
 
                 if item.sell_in < 0:
                     self.item_quality_never_be_negative(item)
+
+    def Backstage_Passes(self, item):
+        if item.sell_in < 6:
+            item.quality = item.quality + 3
+             
+        elif item.sell_in < 11:
+            item.quality = item.quality + 2
+               
+        else:
+            item.quality = item.quality + 1   
+
+        item.sell_in = item.sell_in - 1
+                
+        if item.sell_in < 0:
+            item.quality = 0
+
+        item.quality = min(item.quality,50)
+
+    def Good_Wine(self, item):
+        self.increase_quality(item)
+        item.sell_in = item.sell_in - 1
+
+        if item.sell_in < 0:
+            self.increase_quality(item)
 
     def item_quality_never_be_negative(self, item):
         item.quality = item.quality - 1

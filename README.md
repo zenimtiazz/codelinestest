@@ -31,6 +31,8 @@
 
 - All tests done and working fine ✔️
 
+### Test Done ✅
+
 ### Its time to refactor the code :
 
 - One of strangest item in whole code is B-Dawg keychain so lets refactor it first.
@@ -59,3 +61,8 @@ After removing that I have to test my code if its still working and they are sti
 - And now test is working 👏🏼
 
 - So refactoring part is almost done we can still avoid repitition of code by extracting method which I am going to do but still its fun part to do.
+
+- And the last thing which I did is extracting methods for every item so thats way its more cleaner✔️
+
+### Refactoring Done ✅
+

@@ -53,3 +53,4 @@ After removing that I have to test my code if its still working and they are sti
 - One thing I've learned so far is formatting the code properly indentation 🙅🏻‍♀️
 
 - So much sneaky code so I am refactoring it.
+- Multiple ifs change into if elif else 

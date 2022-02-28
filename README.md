@@ -49,3 +49,7 @@ After removing that I have to test my code if its still working and they are sti
 
 - But before moving to that part I've seen there is duplication and repetition of code in Good wine so I am going to :
 - Extract and create method for that and use in both situations. ✔️
+
+- One thing I've learned so far is formatting the code properly indentation 🙅🏻‍♀️
+
+- So much sneaky code so I am refactoring it.

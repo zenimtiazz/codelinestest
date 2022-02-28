@@ -36,17 +36,15 @@ class GildedRose(object):
                 continue
             
             
-            if item.name != "Backstage passes for HAXX":
-                if item.quality > 0:
-                    item.quality = item.quality - 1
+            if item.quality > 0:
+                item.quality = item.quality - 1
            
                 
                    
 
             if item.sell_in < 0:
-                if item.name != "Backstage passes for HAXX":
-                    if item.quality > 0:
-                        item.quality = item.quality - 1
+                if item.quality > 0:
+                    item.quality = item.quality - 1
   
   
     def increase_quality(self, item):

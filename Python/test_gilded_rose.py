@@ -92,7 +92,19 @@ class GildedRoseTest(unittest.TestCase):
         gilded = GildedRose(items)
         gilded.update_quality()
         self.assertEqual(0, items[0].quality)
+    
+    def test_smelly_items_degrading(self):
+        items = [Item("Duplicate Code",3 , 6)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(4, items[0].quality)
 
+     
+    def test_smelly_items_at_0_quality(self):
+        items = [Item("Duplicate Code",0 , 40)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(36, items[0].quality)
 
 if __name__ == '__main__':
     unittest.main()

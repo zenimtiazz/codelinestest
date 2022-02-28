@@ -21,6 +21,12 @@ class GildedRose(object):
                 self.Backstage_Passes(item)
                 continue
             
+            elif item.name == 'Duplicate Code':
+                item.quality = item.quality - 2
+                item.sell_in = item.sell_in - 1
+                if item.sell_in < 0 :
+                    item.quality = item.quality - 2
+        
             else:
                 self.item_quality_never_be_negative(item)
                 item.sell_in = item.sell_in - 1

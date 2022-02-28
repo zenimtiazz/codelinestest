@@ -38,13 +38,13 @@
 - One of strangest item in whole code is B-Dawg keychain so lets refactor it first.
 - I am just removing all the negative logics of B-Dawg keychain
 ``` if item.name == !'B-DAWG Keychain' ```
-After removing that I have to test my code if its still working and they are still passing that's great ✅
+After removing that I have to test my code if its still working and they are still passing that's great ✔️
 
 
 ##### Looking at the code I feel like I should age the good wine the same way. 
 
-- Removed the negative logic ✅
-- Remove else block. ✅
+- Removed the negative logic ✔️
+- Remove else block.✔️
 - Test Failed it means something went wrong ❌
 
 #### I am going to keep using the same technique I have, this backstage pass.
@@ -66,3 +66,11 @@ After removing that I have to test my code if its still working and they are sti
 
 ### Refactoring Done ✅
 
+#### Its a time to add new functionality in our code
+
+```  Smelly items ("Duplicate Code", "Long Methods", "Ugly Variable Names") degrade in Quality twice as fast as normal items
+```
+
+- So first I have to write test for smelly items.
+
+- Add new function in else if block so after test its quite easy to write but still we have to refactor this part because I can see is repetition .

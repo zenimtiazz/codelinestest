@@ -60,7 +60,7 @@ class GildedRoseTest(unittest.TestCase):
         items = [Item("Backstage passes for Re:Factor", 15, 20)]
         gilded = GildedRose(items)
         gilded.update_quality()
-        self.assertEquals(21, items[0].quality)
+        self.assertEqual(21, items[0].quality)
         
     def test_backstage_pass_stops_at_50(self):
         items = [Item("Backstage passes for Re:Factor", 15, 50)]
@@ -69,19 +69,19 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEqual(50, items[0].quality)
         
     def test_backstage_quality_double_increase_less_than_10_days(self):
-        items = [Item("Backstage passes for HAXX", 10, 40)]
+        items = [Item("Backstage passes for Re:Factor", 10, 40)]
         gilded = GildedRose(items)
         gilded.update_quality()
         self.assertEqual(42, items[0].quality)
     
     def test_backstage_quality_triple_increase_less_than_5_days(self):
-        items = [Item("Backstage passes for HAXX", 3, 25)]
+        items = [Item("Backstage passes for Re:Factor", 3, 25)]
         gilded = GildedRose(items)
         gilded.update_quality()
         self.assertEqual(28, items[0].quality)
 
     def test_backstage_pass_less_than_0(self):
-        items = [Item("Backstage passes for HAXX", 0, 25)]
+        items = [Item("Backstage passes for Re:Factor", 0, 25)]
         gilded = GildedRose(items)
         gilded.update_quality()
         self.assertEqual(0, items[0].quality)

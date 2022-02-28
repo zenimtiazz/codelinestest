@@ -34,3 +34,7 @@
 ### Its time to refactor the code :
 
 - One of strangest item in whole code is B-Dawg keychain so lets refactor it first.
+- I am just removing all the negative logics of B-Dawg keychain
+``` if item.name == !'B-DAWG Keychain' ```
+After removing that I have to test my code if its still working and they are still passing that's great ✅
+

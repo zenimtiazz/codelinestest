@@ -30,11 +30,18 @@ class GildedRoseTest(unittest.TestCase):
         self.assertEqual(1, items[0].sell_in) 
         self.assertEqual(1, items[0].quality) 
         
+    def test_GoodWine_increases_by_2_after_date_quality(self):
+        items = [Item("Good Wine", 0, 37)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(39, items[0].quality)
+        
     def test_GoodWine_hits50_quality(self):
         items = [Item("Good Wine", 20, 50)]
         gilded = GildedRose(items)
         gilded.update_quality()
         self.assertEqual(50, items[0].quality)
+
 
     def test_normal_item_quality(self):
         items = [Item("Ring of Cleansening Code", 10, 20)]

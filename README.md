@@ -26,3 +26,5 @@
 - So this test works item doesn't degrade in quality whatever the sellin date is so this test works 
 
 - This test seems pretty easy to write lets do our 2nd test Good wine increase in quality the older it gets.
+
+- Okay I am going to write couple of tests to see if its according to requirements and then refactoring the code would be more easy and alot simpler.✔️

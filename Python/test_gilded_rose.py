@@ -29,5 +29,11 @@ class GildedRoseTest(unittest.TestCase):
         gilded.update_quality()
         self.assertEqual(1, items[0].sell_in) 
         self.assertEqual(1, items[0].quality) 
+        
+    def test_GoodWine_hits50_quality(self):
+        items = [Item("Good Wine", 20, 50)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEquals(50, items[0].quality)
 if __name__ == '__main__':
     unittest.main()

@@ -21,17 +21,19 @@ class GildedRose(object):
                 continue
             
             if item.name == "Backstage passes for Re:Factor" or item.name == "Backstage passes for HAXX":
-                        if item.sell_in < 11:
-                            if item.quality < 50:
-                                item.quality = item.quality + 1
-                        if item.sell_in < 6:
-                            if item.quality < 50:
-                                item.quality = item.quality + 1
-            item.sell_in = item.sell_in - 1
-            if item.sell_in < 0:
-                item.quality = 0
+                if item.quality < 50:
+                    item.quality = item.quality + 1   
+                    if item.sell_in < 11:
+                        if item.quality < 50:
+                            item.quality = item.quality + 1
+                    if item.sell_in < 6:
+                        if item.quality < 50:
+                            item.quality = item.quality + 1
+                item.sell_in = item.sell_in - 1
+                if item.sell_in < 0:
+                    item.quality = 0
                 # change to 0 because that makes no sense item.quality -item.quality
-            continue
+                continue
             
             
             if item.name != "Backstage passes for HAXX":

@@ -47,5 +47,45 @@ class GildedRoseTest(unittest.TestCase):
         gilded = GildedRose(items)
         gilded.update_quality()
         self.assertEqual(9, items[0].quality)
+      
+    #The quality of an item in never negative 
+    
+    def test_normal_item_stops_at_0(self):
+        items = [Item("Ring of Cleansening Code", 10, 0)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(0, items[0].quality) 
+        
+    def test_backstage_pass_increases_quality(self):
+        items = [Item("Backstage passes for Re:Factor", 15, 20)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEquals(21, items[0].quality)
+        
+    def test_backstage_pass_stops_at_50(self):
+        items = [Item("Backstage passes for Re:Factor", 15, 50)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(50, items[0].quality)
+        
+    def test_backstage_quality_double_increase_less_than_10_days(self):
+        items = [Item("Backstage passes for HAXX", 10, 40)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(42, items[0].quality)
+    
+    def test_backstage_quality_triple_increase_less_than_5_days(self):
+        items = [Item("Backstage passes for HAXX", 3, 25)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEquals(28, items[0].quality)
+
+    def test_backstage_pass_less_than_0(self):
+        items = [Item("Backstage passes for HAXX", 0, 25)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEquals(0, items[0].quality)
+
+
 if __name__ == '__main__':
     unittest.main()

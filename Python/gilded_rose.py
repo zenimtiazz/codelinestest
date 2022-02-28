@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 class GildedRose(object):
-
+ 
     def __init__(self, items):
         self.items = items
 
@@ -13,28 +13,35 @@ class GildedRose(object):
                 continue
             
             elif item.name == 'Good Wine':
-                self.Good_Wine(item)
+                self.good_wine(item)
                 continue
             
             elif item.name == "Backstage passes for Re:Factor" or item.name == "Backstage passes for HAXX":
               
-                self.Backstage_Passes(item)
+                self.backstage_passes(item)
                 continue
             
             elif item.name == 'Duplicate Code':
-                item.quality -= 2
-                item.sell_in -= 1
-                if item.sell_in < 0 :
-                    item.quality -= 2
-        
+                self.ugly_item(item)
+                continue
+         
             else:
-                self.item_quality_never_be_negative(item)
-                item.sell_in -=  1
+                self.default_action(item)
 
-                if item.sell_in < 0:
-                    self.item_quality_never_be_negative(item)
+    def default_action(self, item):
+        self.item_quality_never_be_negative(item)
+        item.sell_in -=  1
 
-    def Backstage_Passes(self, item):
+        if item.sell_in < 0:
+            self.item_quality_never_be_negative(item)
+
+    def ugly_item(self, item):
+        item.quality -= 2
+        item.sell_in -= 1
+        if item.sell_in < 0 :
+            item.quality -= 2
+
+    def backstage_passes(self, item):
         if item.sell_in < 6:
             item.quality +=  3
              
@@ -51,7 +58,7 @@ class GildedRose(object):
 
         item.quality = min(item.quality,50)
 
-    def Good_Wine(self, item):
+    def good_wine(self, item):
         self.increase_quality(item)
         item.sell_in -=  1
 

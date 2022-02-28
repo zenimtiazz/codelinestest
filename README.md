@@ -64,6 +64,17 @@ After removing that I have to test my code if its still working and they are sti
 
 - And the last thing which I did is extracting methods for every item so thats way its more cleaner✔️
 
+ I can also add dictionary to avoid multiple if else if but  thats for later which I can see now is not the requirement of this code ⌚️
+
+ ```
+ ITEM_ACTION_DICT = {
+        'Good Wine': self.good_wine,
+        "new item": self.another_method,
+        "another item": self.another_method,
+    }
+ ``` 
+ 
+
 ### Refactoring Done ✅
 
 #### Its a time to add new functionality in our code

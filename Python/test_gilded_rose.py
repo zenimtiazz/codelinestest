@@ -34,6 +34,18 @@ class GildedRoseTest(unittest.TestCase):
         items = [Item("Good Wine", 20, 50)]
         gilded = GildedRose(items)
         gilded.update_quality()
-        self.assertEquals(50, items[0].quality)
+        self.assertEqual(50, items[0].quality)
+
+    def test_normal_item_quality(self):
+        items = [Item("Ring of Cleansening Code", 10, 20)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(19, items[0].quality)   
+
+    def test_normal_item_degrade_twice_as_fast(self):
+        items = [Item("Ring of Cleansening Code", 0, 11)]
+        gilded = GildedRose(items)
+        gilded.update_quality()
+        self.assertEqual(9, items[0].quality)
 if __name__ == '__main__':
     unittest.main()

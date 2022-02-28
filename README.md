@@ -38,3 +38,9 @@
 ``` if item.name == !'B-DAWG Keychain' ```
 After removing that I have to test my code if its still working and they are still passing that's great ✅
 
+
+##### Looking at the code I feel like I should age the good wine the same way. 
+
+- Removed the negative logic ✅
+- Remove else block. ✅
+- Test Failed it means something went wrong ❌

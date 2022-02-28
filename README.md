@@ -67,10 +67,11 @@ After removing that I have to test my code if its still working and they are sti
 ### Refactoring Done ✅
 
 #### Its a time to add new functionality in our code
-
-```  Smelly items ("Duplicate Code", "Long Methods", "Ugly Variable Names") degrade in Quality twice as fast as normal items
-```
+ 
+Smelly items ("Duplicate Code", "Long Methods", "Ugly Variable Names") degrade in Quality twice as fast as normal items
 
 - So first I have to write test for smelly items.
 
 - Add new function in else if block so after test its quite easy to write but still we have to refactor this part because I can see is repetition .
+
+#### Its done 👏🏼🎉

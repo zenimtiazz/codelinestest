@@ -44,3 +44,8 @@ After removing that I have to test my code if its still working and they are sti
 - Removed the negative logic ✅
 - Remove else block. ✅
 - Test Failed it means something went wrong ❌
+
+#### I am going to keep using the same technique I have, this backstage pass.
+
+- But before moving to that part I've seen there is duplication and repetition of code in Good wine so I am going to :
+- Extract and create method for that and use in both situations. ✔️

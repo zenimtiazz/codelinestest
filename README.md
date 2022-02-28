@@ -28,3 +28,9 @@
 - This test seems pretty easy to write lets do our 2nd test Good wine increase in quality the older it gets.
 
 - Okay I am going to write couple of tests to see if its according to requirements and then refactoring the code would be more easy and alot simpler.✔️
+
+- All tests done and working fine ✔️
+
+### Its time to refactor the code :
+
+- One of strangest item in whole code is B-Dawg keychain so lets refactor it first.

@@ -78,13 +78,13 @@ class GildedRoseTest(unittest.TestCase):
         items = [Item("Backstage passes for HAXX", 3, 25)]
         gilded = GildedRose(items)
         gilded.update_quality()
-        self.assertEquals(28, items[0].quality)
+        self.assertEqual(28, items[0].quality)
 
     def test_backstage_pass_less_than_0(self):
         items = [Item("Backstage passes for HAXX", 0, 25)]
         gilded = GildedRose(items)
         gilded.update_quality()
-        self.assertEquals(0, items[0].quality)
+        self.assertEqual(0, items[0].quality)
 
 
 if __name__ == '__main__':
